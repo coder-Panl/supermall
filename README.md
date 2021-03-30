@@ -17,3 +17,8 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 没有图片资源就到这里来取吧
+```
+https://gitee.com/cai-he/coderwhy-supermall
+```

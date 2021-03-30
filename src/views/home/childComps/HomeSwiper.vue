@@ -16,7 +16,7 @@
       banners: {
         type: Array,
         default() {
-          return []
+          return [];
         }
       }
   },
