@@ -16,7 +16,17 @@
     },
     methods: {
       itemClick(index) {
-        this.currentIndex = index
+        this.currentIndex = index;
+        /*let ss = '';
+        if (item == '流行') {
+          ss = 'pop'
+        } else if (item == '新款') {
+          ss = 'new'
+        } else {
+          ss = 'sell'
+        }
+        this.$parent.homedefaults = ss*/
+        this.$emit('tabClick', index)
       }
     },
     props: {
