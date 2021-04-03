@@ -6,8 +6,7 @@
             ref="scroll"
             :probe-type="3"
             @scroll="contentScroll"
-            :pull-up-load="true"
-            @pullingUp="loadMore">
+            :pull-up-load="true">
       <home-swiper :banners="banners" />
       <recommend-view :recommends="recommends"/>
       <feature-view />
@@ -97,9 +96,9 @@
           this.isShowBackTop = -position.y > 500  // 判断当滚动大于500的时候就显示出来。
       },
 
-      loadMore() {
+      /*loadMore() {
         this.getHomeGoods(this.currentType) // 因为请求的方法已经写过了，所以直接调用，并且我们的这个currentType正好是记录的是当前显示的内容，所以直接传入，这个方法就会只加载当前的数据
-      },
+      },*/
       /**
        * 网络请求的相关方法
        */
@@ -116,7 +115,7 @@
           this.goods[type].list.push(...res.data.list) // ... 是可变数组解析，他会将一组数组一个个解析出来，然后挨个push进去
           this.goods[type].page += 1
 
-          this.$refs.scroll.finishPullUp() // 调用子组件的方法，来告诉页面已经上拉加载完成，可以再次进行上拉加载
+          // this.$refs.scroll.finishPullUp() // 调用子组件的方法，来告诉页面已经上拉加载完成，可以再次进行上拉加载
         })
       }
     }
