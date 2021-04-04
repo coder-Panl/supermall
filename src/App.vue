@@ -1,6 +1,8 @@
 <template>
   <div id="app" class="wrapper">
-    <router-view />
+    <keep-alive> <!--keep-alive 让组件保持活跃，防止组件被销毁-->
+      <router-view />
+    </keep-alive>
     <main-tab-bar />
   </div>
 </template>
